@@ -220,6 +220,34 @@ img {
   gap: 1rem;
 }
 
+.contact-form {
+  display: grid;
+  gap: 0.8rem;
+  max-width: 560px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font: inherit;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--muted);
+}
+
+.contact-form button {
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
 @media (max-width: 920px) {
   .intro-grid,
   .project-grid {
