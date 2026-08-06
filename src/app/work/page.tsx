@@ -14,29 +14,31 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <div>
-      <section className="mx-auto max-w-6xl px-6 pb-14 pt-20 md:px-10 md:pt-28">
-        <Reveal>
-          <p className="text-[15px] font-semibold tracking-tight text-accent">
-            Work
-          </p>
-        </Reveal>
-        <Reveal delay={0.05}>
-          <h1 className="mt-4 max-w-2xl font-heading text-[36px] font-semibold leading-tight tracking-tight text-heading md:text-[52px]">
-            Integrations that make lives easier and businesses stronger.
-          </h1>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <p className="mt-6 max-w-2xl text-[17px] leading-relaxed text-text-secondary">
-            {projects.length} NetSuite-centered integration engagements
-            spanning eCommerce, wholesale, logistics, automotive, and
-            financial systems — each built around real-time, reliable data
-            sync.
-          </p>
-        </Reveal>
+      <section className="bg-page px-6 pb-16 pt-20 text-center md:pt-24">
+        <div className="mx-auto max-w-2xl">
+          <Reveal>
+            <p className="text-[15px] font-semibold tracking-tight text-accent">
+              Work
+            </p>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <h1 className="mt-4 font-heading text-[32px] font-semibold leading-tight tracking-tight text-page-foreground md:text-[46px]">
+              Integrations that make lives easier and businesses stronger.
+            </h1>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mx-auto mt-6 max-w-xl text-[16px] leading-relaxed text-page-foreground-muted">
+              {projects.length} NetSuite-centered integration engagements
+              spanning eCommerce, wholesale, logistics, automotive, and
+              financial systems — each built around real-time, reliable data
+              sync.
+            </p>
+          </Reveal>
+        </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 pb-24 md:px-10">
-        <div>
+      <section className="bg-surface">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
           {projects.map((project, i) => (
             <Reveal key={project.slug} delay={Math.min(i * 0.02, 0.2)}>
               <ProjectCard project={project} />
@@ -45,17 +47,17 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-background-soft">
+      <section className="bg-page">
         <div className="mx-auto max-w-6xl px-6 py-20 text-center md:px-10">
           <Reveal>
-            <h2 className="mx-auto max-w-xl font-heading text-[28px] font-semibold leading-tight tracking-tight text-heading md:text-[36px]">
+            <h2 className="mx-auto max-w-xl font-heading text-[26px] font-semibold leading-tight tracking-tight text-page-foreground md:text-[36px]">
               Have a system that needs to talk to NetSuite?
             </h2>
           </Reveal>
           <Reveal delay={0.08}>
             <Link
               href="/contact"
-              className="mt-8 inline-flex items-center gap-1.5 rounded-full bg-heading px-7 py-3.5 text-[14px] font-semibold text-white transition-colors hover:bg-accent"
+              className="mt-8 inline-flex items-center gap-1.5 rounded-full bg-page-foreground px-7 py-3.5 text-[14px] font-semibold text-page transition-opacity hover:opacity-85"
             >
               Let&rsquo;s Connect <ArrowUpRight size={15} />
             </Link>

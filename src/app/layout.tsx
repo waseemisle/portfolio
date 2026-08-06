@@ -3,6 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ThemeProvider, THEME_INIT_SCRIPT } from "@/components/ThemeProvider";
 import { site } from "@/lib/content";
 
 const inter = Inter({
@@ -31,11 +32,21 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
-      <body className="min-h-screen flex flex-col bg-background text-foreground font-body">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+    <html
+      lang="en"
+      data-theme="dark"
+      className={`${inter.variable} ${manrope.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
+      <body className="min-h-screen flex flex-col bg-page text-page-foreground font-body" suppressHydrationWarning>
+        <ThemeProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

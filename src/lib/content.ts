@@ -13,6 +13,21 @@ export const site = {
   resumeFile: `${basePath}/WaseemAkhtar_NetSuite_Technical_Consultant.pdf`,
 };
 
+export const systems = [
+  "Shopify",
+  "BigCommerce",
+  "WooCommerce",
+  "Magento",
+  "Salesforce",
+  "HubSpot",
+  "Square",
+  "Amazon",
+  "QuickBooks",
+  "Joor",
+  "SOS Inventory",
+  "Zendesk",
+];
+
 export const nav = [
   { label: "Home", href: "/" },
   { label: "Work", href: "/work" },

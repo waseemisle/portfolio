@@ -1,33 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --background-soft: #f5f5f7;
-  --foreground: #1d1d1f;
-  --heading: #242424;
-  --text-secondary: #6e6e73;
-  --text-tertiary: #86868b;
-  --text-quaternary: #b8b8b8;
+  color-scheme: dark;
+
+  /* "page" band — dark by default (hero / spotlight / CTA / footer / nav) */
+  --page: #0d0d0d;
+  --page-foreground: #ffffff;
+  --page-foreground-muted: #b3b3b3;
+  --page-border: rgba(255, 255, 255, 0.1);
+  --page-tag-bg: rgba(255, 255, 255, 0.05);
+  --page-tag-foreground: #969696;
+
+  /* "surface" band — the alternating light band, same tone in both themes */
+  --surface: #f5f5f7;
+  --surface-foreground: #1d1d1f;
+  --surface-foreground-muted: #6e6e73;
+  --surface-border: rgba(29, 29, 31, 0.1);
+  --surface-tag-bg: rgba(29, 29, 31, 0.05);
+  --surface-tag-foreground: #6e6e73;
+  --surface-card: #ffffff;
+
   --accent: #0099ff;
-  --accent-dark: #0077cc;
-  --border: rgba(29, 29, 31, 0.08);
-  --border-strong: rgba(29, 29, 31, 0.12);
+  --accent-foreground: #ffffff;
+
   --font-heading: var(--font-manrope);
   --font-body: var(--font-inter);
 }
 
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --page: #ffffff;
+  --page-foreground: #1d1d1f;
+  --page-foreground-muted: #6e6e73;
+  --page-border: rgba(29, 29, 31, 0.1);
+  --page-tag-bg: rgba(29, 29, 31, 0.05);
+  --page-tag-foreground: #6e6e73;
+}
+
 @theme inline {
-  --color-background: var(--background);
-  --color-background-soft: var(--background-soft);
-  --color-foreground: var(--foreground);
-  --color-heading: var(--heading);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-tertiary: var(--text-tertiary);
-  --color-text-quaternary: var(--text-quaternary);
+  --color-page: var(--page);
+  --color-page-foreground: var(--page-foreground);
+  --color-page-foreground-muted: var(--page-foreground-muted);
+  --color-page-border: var(--page-border);
+  --color-page-tag-bg: var(--page-tag-bg);
+  --color-page-tag-foreground: var(--page-tag-foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-surface-foreground-muted: var(--surface-foreground-muted);
+  --color-surface-border: var(--surface-border);
+  --color-surface-tag-bg: var(--surface-tag-bg);
+  --color-surface-tag-foreground: var(--surface-tag-foreground);
+  --color-surface-card: var(--surface-card);
+
   --color-accent: var(--accent);
-  --color-accent-dark: var(--accent-dark);
-  --color-border: var(--border);
-  --color-border-strong: var(--border-strong);
+  --color-accent-foreground: var(--accent-foreground);
+
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
 }
@@ -41,16 +70,16 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--page);
+  color: var(--page-foreground);
   font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), sans-serif;
-  color: var(--heading);
   letter-spacing: -0.02em;
 }
 
@@ -60,4 +89,20 @@ h1, h2, h3, h4, h5, h6 {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.radial-glow {
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 20%,
+    rgba(0, 153, 255, 0.16),
+    transparent 70%
+  );
+}
+
+:root[data-theme="light"] .radial-glow {
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 20%,
+    rgba(0, 153, 255, 0.1),
+    transparent 70%
+  );
 }
