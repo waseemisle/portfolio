@@ -38,16 +38,19 @@ export default function Home() {
 
           <Reveal delay={0.08}>
             <h1 className="mt-9 font-heading text-[34px] font-medium leading-[1.15] tracking-tight text-page-foreground md:text-[52px]">
-              <span className="text-page-foreground-muted">I&rsquo;m Waseem,</span>{" "}
-              engineering integrations that scale.
+              I build scalable
+              <br />
+              ERP integrations
+              <br />
+              that drive growth.
             </h1>
           </Reveal>
 
           <Reveal delay={0.14}>
             <p className="mx-auto mt-6 max-w-xl text-[16px] leading-relaxed text-page-foreground-muted md:text-[18px]">
-              I help operations leaders connect NetSuite with the platforms
-              they run on, turning fragmented data into confident, real-time
-              decisions.
+              7+ years delivering enterprise NetSuite implementations,
+              SuiteScript development, and large-scale system integrations
+              across eCommerce, retail, manufacturing, and logistics.
             </p>
           </Reveal>
 
