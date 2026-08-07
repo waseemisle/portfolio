@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { nav, site, systems } from "@/lib/content";
+import { nav, platforms, site } from "@/lib/content";
 
 export default function Footer() {
   return (
     <footer className="border-t border-page-border bg-page text-page-foreground">
       <div className="overflow-hidden border-b border-page-border py-6">
         <div className="no-scrollbar flex animate-none flex-wrap items-center justify-center gap-x-10 gap-y-4 px-6 text-[15px] font-semibold tracking-tight text-page-foreground-muted md:gap-x-14">
-          {systems.map((s) => (
+          {platforms.map((s) => (
             <span key={s}>{s}</span>
           ))}
         </div>

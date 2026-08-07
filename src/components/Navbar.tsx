@@ -17,10 +17,12 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
         <Link
           href="/"
-          className="font-heading text-[14px] font-semibold tracking-tight text-page-foreground-muted transition-colors hover:text-page-foreground"
+          className={`font-heading text-[14px] font-semibold tracking-tight transition-colors hover:text-page-foreground ${
+            pathname === "/" ? "text-page-foreground" : "text-page-foreground-muted"
+          }`}
           onClick={() => setOpen(false)}
         >
-          {site.name}
+          {site.name.toUpperCase()}
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">

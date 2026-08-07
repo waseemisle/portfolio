@@ -1,39 +1,73 @@
 import type { Metadata } from "next";
 import { Download } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import { education, experience, site, skillGroups } from "@/lib/content";
+import { about, education, experience, site, skillGroups } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: `Resume — ${site.name}`,
-  description: `Experience, education, and technical skills for ${site.name}, ${site.role}.`,
+  title: `About — ${site.name}`,
+  description: `About ${site.name}, ${site.role}. ${about.bio[0]}`,
 };
 
-export default function ResumePage() {
+export default function AboutPage() {
   return (
     <div>
+      {/* Intro — dark band */}
       <section className="bg-page px-6 pb-16 pt-20 text-center md:pt-24">
         <div className="mx-auto max-w-2xl">
           <Reveal>
             <p className="text-[15px] font-semibold tracking-tight text-accent">
-              Resume
+              About Me
             </p>
           </Reveal>
           <Reveal delay={0.05}>
-            <h1 className="mt-4 font-heading text-[32px] font-semibold leading-tight tracking-tight text-page-foreground md:text-[46px]">
-              7+ years building enterprise ERP integrations.
+            <h1 className="mt-4 font-heading text-[32px] font-semibold leading-tight tracking-tight text-page-foreground md:text-[44px]">
+              {site.name}
             </h1>
           </Reveal>
-          <Reveal delay={0.1}>
+
+          {about.bio.map((p, i) => (
+            <Reveal key={p} delay={0.1 + i * 0.05}>
+              <p className="mx-auto mt-5 max-w-xl text-[15.5px] leading-relaxed text-page-foreground-muted">
+                {p}
+              </p>
+            </Reveal>
+          ))}
+
+          <Reveal delay={0.2}>
+            <p className="mx-auto mt-5 max-w-xl text-[14px] text-page-foreground-muted/70">
+              {about.availability}
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.26}>
             <a
               href={site.resumeFile}
               target="_blank"
               rel="noreferrer"
               className="mt-8 inline-flex items-center gap-2 rounded-full border border-page-border px-6 py-3.5 text-[14px] font-semibold text-page-foreground transition-colors hover:bg-page-tag-bg"
             >
-              <Download size={15} /> Download PDF
+              <Download size={15} /> Download Resume
             </a>
           </Reveal>
         </div>
+
+        <Reveal delay={0.32}>
+          <div className="mx-auto mt-14 grid max-w-xl grid-cols-3 gap-4">
+            {about.stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="rounded-2xl bg-page-tag-bg p-5 text-center"
+              >
+                <p className="font-heading text-[28px] font-semibold text-page-foreground md:text-[34px]">
+                  {stat.value}
+                </p>
+                <p className="mt-1 text-[12px] leading-snug text-page-foreground-muted">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </section>
 
       {/* Experience — light band */}
