@@ -1,8 +1,14 @@
 import { Mail, Phone } from "lucide-react";
 import LinkedinIcon from "./icons/LinkedinIcon";
-import { site } from "@/lib/content";
+import { SiteSettings } from "@/lib/content-store";
 
-export default function ContactRow({ className }: { className?: string }) {
+export default function ContactRow({
+  site,
+  className,
+}: {
+  site: Pick<SiteSettings, "email" | "phone" | "phoneHref" | "linkedin">;
+  className?: string;
+}) {
   return (
     <div
       className={`flex flex-wrap items-center justify-center gap-3 text-[14px] font-medium ${className ?? ""}`}

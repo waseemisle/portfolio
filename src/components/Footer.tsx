@@ -1,7 +1,19 @@
+"use client";
+
 import Link from "next/link";
-import { nav, platforms, site } from "@/lib/content";
+import { nav } from "@/lib/content";
+import {
+  defaultSiteSettings,
+  fetchSiteSettings,
+  defaultHomeContent,
+  fetchHomeContent,
+} from "@/lib/content-store";
+import { useLiveData } from "@/hooks/useLiveData";
 
 export default function Footer() {
+  const site = useLiveData(fetchSiteSettings, defaultSiteSettings);
+  const { platforms } = useLiveData(fetchHomeContent, defaultHomeContent);
+
   return (
     <footer className="border-t border-page-border bg-page text-page-foreground">
       <div className="overflow-hidden border-b border-page-border py-6">

@@ -1,6 +1,6 @@
-import { Project } from "@/lib/content";
+import { ProjectDoc } from "@/lib/content-store";
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project }: { project: ProjectDoc }) {
   return (
     <div className="group border-b border-surface-border py-10 first:pt-0 last:border-b-0">
       <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">

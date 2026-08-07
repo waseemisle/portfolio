@@ -1,37 +1,36 @@
-import type { Metadata } from "next";
+"use client";
+
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import LinkedinIcon from "@/components/icons/LinkedinIcon";
-import { site } from "@/lib/content";
+import { useLiveData } from "@/hooks/useLiveData";
+import { defaultSiteSettings, fetchSiteSettings } from "@/lib/content-store";
 
-export const metadata: Metadata = {
-  title: `Contact — ${site.name}`,
-  description: `Get in touch with ${site.name}, ${site.role}.`,
-};
+export default function ContactPageContent() {
+  const site = useLiveData(fetchSiteSettings, defaultSiteSettings);
 
-const channels = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: site.email,
-    href: `mailto:${site.email}`,
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: site.phone,
-    href: `tel:${site.phoneHref}`,
-  },
-  {
-    icon: LinkedinIcon,
-    label: "LinkedIn",
-    value: "in/waseemakhtarr",
-    href: site.linkedin,
-    external: true,
-  },
-];
+  const channels = [
+    {
+      icon: Mail,
+      label: "Email",
+      value: site.email,
+      href: `mailto:${site.email}`,
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: site.phone,
+      href: `tel:${site.phoneHref}`,
+    },
+    {
+      icon: LinkedinIcon,
+      label: "LinkedIn",
+      value: "in/waseemakhtarr",
+      href: site.linkedin,
+      external: true,
+    },
+  ];
 
-export default function ContactPage() {
   return (
     <div>
       <section className="bg-page px-6 pb-16 pt-20 text-center md:pt-24">
@@ -93,7 +92,7 @@ export default function ContactPage() {
                 {site.location}
               </div>
               <a
-                href={site.resumeFile}
+                href={site.resumeUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="text-[14px] font-semibold text-surface-foreground underline decoration-surface-border underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"

@@ -1,17 +1,15 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import ProjectCard from "@/components/ProjectCard";
-import { projects, site } from "@/lib/content";
+import { useLiveData } from "@/hooks/useLiveData";
+import { defaultProjects, fetchProjects } from "@/lib/content-store";
 
-export const metadata: Metadata = {
-  title: `Work — ${site.name}`,
-  description:
-    "Enterprise NetSuite integrations across eCommerce, wholesale, logistics, and finance systems.",
-};
+export default function WorkPageContent() {
+  const projects = useLiveData(fetchProjects, defaultProjects);
 
-export default function WorkPage() {
   return (
     <div>
       <section className="bg-page px-6 pb-16 pt-20 text-center md:pt-24">
@@ -40,7 +38,7 @@ export default function WorkPage() {
       <section className="bg-surface">
         <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
           {projects.map((project, i) => (
-            <Reveal key={project.slug} delay={Math.min(i * 0.02, 0.2)}>
+            <Reveal key={project.id} delay={Math.min(i * 0.02, 0.2)}>
               <ProjectCard project={project} />
             </Reveal>
           ))}

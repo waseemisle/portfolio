@@ -1,14 +1,28 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Download } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import { about, education, experience, site, skillGroups } from "@/lib/content";
+import { useLiveData } from "@/hooks/useLiveData";
+import {
+  defaultSiteSettings,
+  fetchSiteSettings,
+  defaultAboutContent,
+  fetchAboutContent,
+  defaultExperience,
+  fetchExperience,
+  defaultEducation,
+  fetchEducation,
+  defaultSkillGroups,
+  fetchSkillGroups,
+} from "@/lib/content-store";
 
-export const metadata: Metadata = {
-  title: `About — ${site.name}`,
-  description: `About ${site.name}, ${site.role}. ${about.bio[0]}`,
-};
+export default function AboutPageContent() {
+  const site = useLiveData(fetchSiteSettings, defaultSiteSettings);
+  const about = useLiveData(fetchAboutContent, defaultAboutContent);
+  const experience = useLiveData(fetchExperience, defaultExperience);
+  const education = useLiveData(fetchEducation, defaultEducation);
+  const skillGroups = useLiveData(fetchSkillGroups, defaultSkillGroups);
 
-export default function AboutPage() {
   return (
     <div>
       {/* Intro — dark band */}
@@ -41,7 +55,7 @@ export default function AboutPage() {
 
           <Reveal delay={0.26}>
             <a
-              href={site.resumeFile}
+              href={site.resumeUrl}
               target="_blank"
               rel="noreferrer"
               className="mt-8 inline-flex items-center gap-2 rounded-full border border-page-border px-6 py-3.5 text-[14px] font-semibold text-page-foreground transition-colors hover:bg-page-tag-bg"
@@ -81,7 +95,7 @@ export default function AboutPage() {
 
           <div className="mt-10">
             {experience.map((job, i) => (
-              <Reveal key={`${job.company}-${job.role}`} delay={Math.min(i * 0.03, 0.2)}>
+              <Reveal key={job.id} delay={Math.min(i * 0.03, 0.2)}>
                 <div className="grid grid-cols-1 gap-3 border-b border-surface-border py-9 first:pt-0 last:border-b-0 md:grid-cols-[240px_1fr]">
                   <div>
                     <p className="font-heading text-[17px] font-semibold text-surface-foreground">
@@ -126,7 +140,7 @@ export default function AboutPage() {
           </Reveal>
           <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2">
             {skillGroups.map((group, i) => (
-              <Reveal key={group.title} delay={0.04 * i}>
+              <Reveal key={group.id} delay={0.04 * i}>
                 <div>
                   <h3 className="text-[13px] font-semibold uppercase tracking-wider text-page-foreground-muted">
                     {group.title}
@@ -158,7 +172,7 @@ export default function AboutPage() {
           </Reveal>
           <div className="mt-8">
             {education.map((ed, i) => (
-              <Reveal key={ed.school} delay={0.05 * i}>
+              <Reveal key={ed.id} delay={0.05 * i}>
                 <div className="flex flex-col gap-1 border-b border-surface-border py-6 first:pt-0 last:border-b-0 md:flex-row md:items-center md:justify-between">
                   <div>
                     <p className="text-[15.5px] font-semibold text-surface-foreground">

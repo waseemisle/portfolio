@@ -1,24 +1,32 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 import { ArrowRight, ArrowUpRight, ChevronDown } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import ProjectCard from "@/components/ProjectCard";
 import ContactRow from "@/components/ContactRow";
 import PlatformsMarquee from "@/components/PlatformsMarquee";
-import { basePath } from "@/lib/base-path";
+import { useLiveData } from "@/hooks/useLiveData";
 import {
-  about,
-  expertise,
-  expertiseIntro,
-  featuredIntegration,
-  finalCta,
-  pillars,
-  projects,
-  site,
-} from "@/lib/content";
+  defaultSiteSettings,
+  fetchSiteSettings,
+  defaultHomeContent,
+  fetchHomeContent,
+  defaultAboutContent,
+  fetchAboutContent,
+  defaultProjects,
+  fetchProjects,
+} from "@/lib/content-store";
 
 export default function Home() {
+  const site = useLiveData(fetchSiteSettings, defaultSiteSettings);
+  const home = useLiveData(fetchHomeContent, defaultHomeContent);
+  const about = useLiveData(fetchAboutContent, defaultAboutContent);
+  const projects = useLiveData(fetchProjects, defaultProjects);
   const featured = projects.slice(0, 6);
+  const { pillars, expertiseIntro, expertise, featuredIntegration, finalCta, platforms } = home;
 
   return (
     <div>
@@ -28,10 +36,11 @@ export default function Home() {
           <Reveal>
             <div className="mx-auto h-[130px] w-[130px] overflow-hidden rounded-full ring-1 ring-page-border md:h-[150px] md:w-[150px]">
               <Image
-                src={`${basePath}/waseem.jpg`}
+                src={site.avatarUrl}
                 alt={site.name}
                 width={300}
                 height={300}
+                unoptimized
                 priority
                 className="h-full w-full object-cover grayscale"
               />
@@ -62,7 +71,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={0.22}>
-            <ContactRow className="mt-8" />
+            <ContactRow site={site} className="mt-8" />
           </Reveal>
 
           <Reveal delay={0.3}>
@@ -75,7 +84,7 @@ export default function Home() {
         </div>
       </section>
 
-      <PlatformsMarquee />
+      <PlatformsMarquee platforms={platforms} />
 
       {/* Pillars — light band */}
       <section className="bg-surface">
@@ -184,17 +193,20 @@ export default function Home() {
                   {featuredIntegration.architectureDescription}
                 </p>
                 <div className="mt-7 flex flex-wrap items-center justify-center gap-3 text-[12.5px] font-semibold text-page-foreground">
-                  <span className="rounded-full bg-page-tag-bg px-4 py-2">
-                    Shopify
-                  </span>
-                  <ArrowRight size={14} className="text-page-foreground-muted" />
-                  <span className="rounded-full bg-page-tag-bg px-4 py-2">
-                    Magento
-                  </span>
-                  <ArrowRight size={14} className="text-page-foreground-muted" />
-                  <span className="rounded-full bg-accent px-4 py-2 text-white">
-                    NetSuite
-                  </span>
+                  {featuredIntegration.flow.map((step, i) => (
+                    <Fragment key={step}>
+                      {i > 0 && <ArrowRight size={14} className="text-page-foreground-muted" />}
+                      <span
+                        className={`rounded-full px-4 py-2 ${
+                          i === featuredIntegration.flow.length - 1
+                            ? "bg-accent text-white"
+                            : "bg-page-tag-bg"
+                        }`}
+                      >
+                        {step}
+                      </span>
+                    </Fragment>
+                  ))}
                 </div>
               </div>
             </Reveal>
@@ -214,7 +226,7 @@ export default function Home() {
 
           <div className="mt-12">
             {featured.map((project, i) => (
-              <Reveal key={project.slug} delay={0.03 * i}>
+              <Reveal key={project.id} delay={0.03 * i}>
                 <ProjectCard project={project} />
               </Reveal>
             ))}
@@ -294,7 +306,7 @@ export default function Home() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <ContactRow className="mt-8" />
+              <ContactRow site={site} className="mt-8" />
             </Reveal>
           </div>
         </div>

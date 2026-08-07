@@ -1,16 +1,14 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import { expertise, expertiseIntro, site } from "@/lib/content";
+import { useLiveData } from "@/hooks/useLiveData";
+import { defaultHomeContent, fetchHomeContent } from "@/lib/content-store";
 
-export const metadata: Metadata = {
-  title: `Expertise — ${site.name}`,
-  description:
-    "Industry expertise across eCommerce, manufacturing, financial services, logistics, CRM, and marketplace integrations with NetSuite.",
-};
+export default function ExpertisePageContent() {
+  const { expertise, expertiseIntro } = useLiveData(fetchHomeContent, defaultHomeContent);
 
-export default function ExpertisePage() {
   return (
     <div>
       <section className="bg-page px-6 pb-16 pt-20 text-center md:pt-24">

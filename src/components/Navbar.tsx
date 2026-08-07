@@ -5,12 +5,15 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { nav, site } from "@/lib/content";
+import { nav } from "@/lib/content";
+import { defaultSiteSettings, fetchSiteSettings } from "@/lib/content-store";
+import { useLiveData } from "@/hooks/useLiveData";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const site = useLiveData(fetchSiteSettings, defaultSiteSettings);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-page-border bg-page/95 backdrop-blur-md">
