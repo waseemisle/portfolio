@@ -15,12 +15,24 @@ function topCounts(items: string[], n = 5): [string, number][] {
 export default function AdminTrafficPage() {
   const [visits, setVisits] = useState<VisitDoc[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchVisits().then((data) => {
-      setVisits(data);
-      setLoading(false);
-    });
+    fetchVisits()
+      .then((data) => {
+        setVisits(data);
+      })
+      .catch((err) => {
+        const message = err instanceof Error ? err.message : String(err);
+        if (message.toLowerCase().includes("permission")) {
+          setError(
+            "Firestore is still using its default rules, which block this read. Publish firestore.rules in the Firebase Console (Firestore Database → Rules), then reload this page."
+          );
+        } else {
+          setError(message);
+        }
+      })
+      .finally(() => setLoading(false));
   }, []);
 
   const topPages = useMemo(() => topCounts(visits.map((v) => v.path)), [visits]);
@@ -50,6 +62,12 @@ export default function AdminTrafficPage() {
         </a>
         .
       </p>
+
+      {error && (
+        <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-[13.5px] text-amber-900">
+          {error}
+        </div>
+      )}
 
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
         <SummaryCard title="Top pages" rows={topPages} />
