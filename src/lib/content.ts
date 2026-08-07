@@ -142,12 +142,20 @@ export const projects: Project[] = [
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync", "Price Levels"],
   },
   {
-    slug: "magento-amazon",
-    category: "Magento + Amazon",
-    title: "NetSuite Magento2 & Amazon",
+    slug: "magento2",
+    category: "Magento2",
+    title: "NetSuite Magento2 Integration",
     description:
-      "Led automotive industry integration connecting NetSuite with Magento2 and Amazon marketplace for unified product, order, inventory, and customer management.",
+      "Led automotive industry integration connecting NetSuite with Magento2 for unified product, order, inventory, and customer management.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync", "Price Levels"],
+  },
+  {
+    slug: "amazon",
+    category: "Amazon",
+    title: "NetSuite Amazon Integration",
+    description:
+      "Led automotive industry integration connecting NetSuite with Amazon marketplace for unified product, order, inventory, and customer management.",
+    tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
   },
   {
     slug: "woocommerce",
@@ -158,11 +166,19 @@ export const projects: Project[] = [
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync", "Payments Sync"],
   },
   {
-    slug: "magento-shopify",
-    category: "Magento + Shopify",
-    title: "NetSuite Magento & Shopify",
+    slug: "magento-electronics",
+    category: "Magento",
+    title: "NetSuite Magento Integration",
     description:
-      "Led dual-platform integration managing product catalogs, orders, inventory, and customer data across both Magento and Shopify storefronts for a consumer electronics retailer.",
+      "Led integration managing product catalog, orders, inventory, and customer data on Magento for a consumer electronics retailer.",
+    tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
+  },
+  {
+    slug: "shopify-electronics",
+    category: "Shopify",
+    title: "NetSuite Shopify Integration — Consumer Electronics",
+    description:
+      "Led integration managing product catalog, orders, inventory, and customer data on Shopify for a consumer electronics retailer.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
   },
   {
@@ -190,12 +206,20 @@ export const projects: Project[] = [
     tags: ["Sales Orders", "Products Sync", "UPC Sync", "Customers Sync"],
   },
   {
-    slug: "sos-stripe",
-    category: "SOS + Stripe",
-    title: "NetSuite SOS Inventory & Stripe",
+    slug: "sos-inventory",
+    category: "SOS Inventory",
+    title: "NetSuite SOS Inventory Integration",
     description:
-      "Led multi-system integration connecting NetSuite with SOS Inventory for stock management and Stripe for payment processing automation.",
+      "Led integration connecting NetSuite with SOS Inventory for stock management, syncing sales orders, products, UPCs, and customer records.",
     tags: ["Sales Orders", "Products Sync", "UPC Sync", "Customers Sync"],
+  },
+  {
+    slug: "stripe",
+    category: "Stripe",
+    title: "NetSuite Stripe Integration",
+    description:
+      "Led integration connecting NetSuite with Stripe for automated payment processing and reconciliation.",
+    tags: ["Payment Sync", "Customers Sync"],
   },
   {
     slug: "quickbooks",
