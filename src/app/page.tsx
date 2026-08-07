@@ -80,8 +80,8 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
           <Reveal>
             <h2 className="max-w-2xl font-heading text-[26px] font-semibold leading-tight tracking-tight text-surface-foreground md:text-[36px]">
-              I&rsquo;ll help you unify every system your business runs on,
-              and the confidence to scale on it.
+              I help businesses streamline operations through expert
+              NetSuite integrations and intelligent automation.
             </h2>
           </Reveal>
 

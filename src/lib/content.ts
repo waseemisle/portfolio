@@ -79,173 +79,123 @@ export const expertise = [
 
 export type Project = {
   slug: string;
-  system: string;
-  industry: string;
-  region?: string;
-  role: string;
-  summary: string;
+  category: string;
+  title: string;
+  description: string;
   tags: string[];
 };
 
 export const projects: Project[] = [
   {
-    slug: "shopify-apparel",
-    system: "NetSuite × Shopify",
-    industry: "Fashion & Apparel eCommerce",
-    role: "Integration Developer",
-    summary:
-      "Built a bi-directional NetSuite–Shopify integration keeping product catalog, orders, inventory, and customer records in sync across channels.",
+    slug: "shopify",
+    category: "Shopify",
+    title: "NetSuite Shopify Integration",
+    description:
+      "Full-cycle integration enabling automated synchronization of sales orders, products, customers, and inventory between NetSuite and Shopify storefronts.",
+    tags: ["Sales Orders Sync", "Products Sync", "Customers Sync", "Inventory Sync"],
+  },
+  {
+    slug: "3pl-vos-logistics",
+    category: "3PL / AWS",
+    title: "NetSuite 3PL VOS Logistics",
+    description:
+      "Built a middleware AWS Connector App for Europe-based logistics, handling inventory sync, sales orders, purchase orders, item receipts, and price synchronization.",
+    tags: ["Inventory Sync", "Sales Orders", "Purchase Orders", "Item Receipts", "Price Sync"],
+  },
+  {
+    slug: "bigcommerce",
+    category: "BigCommerce",
+    title: "NetSuite BigCommerce Integration",
+    description:
+      "Comprehensive integration covering product catalog, orders, inventory levels, customer profiles, and dynamic price levels synchronization.",
+    tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync", "Price Levels"],
+  },
+  {
+    slug: "magento-amazon",
+    category: "Magento + Amazon",
+    title: "NetSuite Magento2 & Amazon",
+    description:
+      "Automotive industry integration connecting NetSuite with Magento2 and Amazon marketplace for unified product, order, inventory, and customer management.",
+    tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync", "Price Levels"],
+  },
+  {
+    slug: "woocommerce",
+    category: "WooCommerce",
+    title: "NetSuite WooCommerce Integration",
+    description:
+      "End-to-end WooCommerce integration with automated product, order, inventory, customer, and payment synchronization to NetSuite.",
+    tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync", "Payments Sync"],
+  },
+  {
+    slug: "magento-shopify",
+    category: "Magento + Shopify",
+    title: "NetSuite Magento & Shopify",
+    description:
+      "Dual-platform integration managing product catalogs, orders, inventory, and customer data across both Magento and Shopify storefronts.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
   },
   {
-    slug: "3pl-middleware",
-    system: "NetSuite × 3PL Logistics Middleware (AWS)",
-    industry: "Logistics & 3PL",
-    region: "Europe",
-    role: "Middleware Architect",
-    summary:
-      "Designed an AWS-hosted connector app bridging NetSuite with a third-party logistics provider, orchestrating inventory and order data at scale.",
-    tags: [
-      "Inventory Sync",
-      "Sales Orders Sync",
-      "Purchase Order Sync",
-      "Item Receipt Sync",
-      "Price Sync",
-    ],
-  },
-  {
-    slug: "bigcommerce-consumer",
-    system: "NetSuite × BigCommerce",
-    industry: "Consumer Goods Retail",
-    role: "Integration Developer",
-    summary:
-      "Delivered a full-catalog BigCommerce integration automating product, order, inventory, and pricing sync for a growing DTC brand.",
-    tags: [
-      "Product Sync",
-      "Orders Sync",
-      "Inventory Sync",
-      "Customer Sync",
-      "Price Levels Sync",
-    ],
-  },
-  {
-    slug: "magento-amazon-automotive",
-    system: "NetSuite × Magento 2 & Amazon",
-    industry: "Automotive",
-    role: "Integration Developer",
-    summary:
-      "Unified a two-channel automotive parts business on NetSuite, syncing catalog, orders, inventory, and pricing across Magento and Amazon Marketplace.",
-    tags: [
-      "Product Sync",
-      "Orders Sync",
-      "Inventory Sync",
-      "Customer Sync",
-      "Price Levels Sync",
-    ],
-  },
-  {
-    slug: "woocommerce-lifestyle",
-    system: "NetSuite × WooCommerce",
-    industry: "Premium Design & Lifestyle",
-    role: "Integration Developer",
-    summary:
-      "Connected a WooCommerce storefront to NetSuite, automating order, inventory, customer, and payment reconciliation.",
-    tags: [
-      "Product Sync",
-      "Orders Sync",
-      "Inventory Sync",
-      "Customer Sync",
-      "Payments Sync",
-    ],
-  },
-  {
-    slug: "magento-shopify-electronics",
-    system: "NetSuite × Magento & Shopify",
-    industry: "Consumer Electronics Retail",
-    role: "Integration Developer",
-    summary:
-      "Ran a dual-channel Magento and Shopify integration, keeping fulfillment, inventory, and customer data consistent across both storefronts.",
+    slug: "shopify-joor",
+    category: "Shopify + Joor",
+    title: "NetSuite Shopify & Joor",
+    description:
+      "Fashion industry integration connecting NetSuite with Shopify B2C and Joor B2B platforms for unified wholesale and retail operations.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
   },
   {
-    slug: "shopify-joor-fashion",
-    system: "NetSuite × Shopify & Joor",
-    industry: "Apparel Wholesale & Retail",
-    role: "Integration Developer",
-    summary:
-      "Combined DTC and wholesale channels on one NetSuite instance, syncing Shopify retail data alongside Joor B2B wholesale orders.",
-    tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
+    slug: "square",
+    category: "Square",
+    title: "NetSuite Square Integration",
+    description:
+      "Retail POS integration syncing transactions, items, and customers with automated journal entry creation in NetSuite for accurate financial reporting.",
+    tags: ["Transactions Sync", "Items Sync", "JE Creation", "Customer Sync"],
   },
   {
-    slug: "square-fnb",
-    system: "NetSuite × Square (POS)",
-    industry: "Food & Beverage Retail",
-    role: "Integration Developer",
-    summary:
-      "Automated daily POS reconciliation, syncing Square transactions and items into NetSuite with journal entry creation for finance.",
-    tags: ["Transactions Sync", "Items Sync", "JE Creation"],
+    slug: "joor",
+    category: "Joor",
+    title: "Joor NetSuite Integration",
+    description:
+      "B2B wholesale platform integration handling sales orders, products, UPC codes, and customer data synchronization with NetSuite.",
+    tags: ["Sales Orders", "Products Sync", "UPC Sync", "Customers Sync"],
   },
   {
-    slug: "joor-fashion-wholesale",
-    system: "NetSuite × Joor",
-    industry: "Fashion Wholesale",
-    role: "Integration Developer",
-    summary:
-      "Built a wholesale order pipeline syncing Joor sales orders, products, UPCs, and customer records into NetSuite.",
-    tags: ["Sales Orders Sync", "Products Sync", "UPC Sync", "Customers Sync"],
+    slug: "sos-stripe",
+    category: "SOS + Stripe",
+    title: "NetSuite SOS Inventory & Stripe",
+    description:
+      "Multi-system integration connecting NetSuite with SOS Inventory for stock management and Stripe for payment processing automation.",
+    tags: ["Sales Orders", "Products Sync", "UPC Sync", "Customers Sync"],
   },
   {
-    slug: "sos-stripe-wholesale",
-    system: "NetSuite × SOS Inventory & Stripe",
-    industry: "Wholesale Distribution",
-    role: "Integration Developer",
-    summary:
-      "Integrated NetSuite with SOS Inventory and Stripe, syncing orders, products, UPCs, and customer payment data.",
-    tags: ["Sales Orders Sync", "Products Sync", "UPC Sync", "Customers Sync"],
+    slug: "quickbooks",
+    category: "QuickBooks",
+    title: "NetSuite QuickBooks Integration",
+    description:
+      "Accounting system bridge enabling payment synchronization and consolidated financial reporting between NetSuite and QuickBooks.",
+    tags: ["Payment Sync", "Financial Reporting", "Invoice Sync"],
   },
   {
-    slug: "quickbooks-print",
-    system: "NetSuite × QuickBooks",
-    industry: "Print & Promotional Products",
-    role: "NetSuite Administrator",
-    summary:
-      "Built an accounting bridge between NetSuite and QuickBooks for invoice sync, payment reconciliation, and financial reporting.",
-    tags: ["Payment Sync", "Financial Reporting"],
-  },
-  {
-    slug: "shopify-safety",
-    system: "NetSuite × Shopify",
-    industry: "Industrial Safety Equipment",
-    role: "Integration Developer",
-    summary:
-      "Delivered a focused Shopify integration for an industrial safety retailer, automating order, product, and customer sync.",
-    tags: ["Sales Orders Sync", "Products Sync", "Customers Sync"],
-  },
-  {
-    slug: "salesforce-enterprise",
-    system: "NetSuite × Salesforce",
-    industry: "Enterprise Software",
-    role: "Integration Developer",
-    summary:
-      "Connected NetSuite with Salesforce to sync opportunities, estimates, and customer records across sales and finance teams.",
+    slug: "salesforce",
+    category: "Salesforce",
+    title: "NetSuite Salesforce Integration",
+    description:
+      "Enterprise CRM-ERP integration for the software industry, syncing opportunities, estimates, and customer data between Salesforce and NetSuite.",
     tags: ["Opportunity Sync", "Estimates Sync", "Customers Sync"],
   },
   {
-    slug: "hubspot-edtech",
-    system: "NetSuite × HubSpot",
-    industry: "Education & EdTech",
-    role: "Integration Developer",
-    summary:
-      "Linked marketing and finance by syncing HubSpot contacts, companies, and deals into NetSuite for a training and education provider.",
+    slug: "hubspot",
+    category: "HubSpot",
+    title: "NetSuite HubSpot Integration",
+    description:
+      "EdTech industry integration connecting HubSpot marketing and sales data with NetSuite for unified contact, company, and deal management.",
     tags: ["Contacts Sync", "Companies Sync", "Deals Sync"],
   },
   {
     slug: "square-seafood",
-    system: "NetSuite × Square (POS)",
-    industry: "Seafood & Fish Processing",
-    role: "Integration Developer",
-    summary:
-      "Rolled out a POS-to-ERP integration for a seafood processor, syncing transactions, customers, and inventory into NetSuite.",
+    category: "Square",
+    title: "NetSuite Square — Seafood Processing",
+    description:
+      "Specialized integration for the seafood processing industry, handling transactions, customer data, and inventory synchronization with NetSuite.",
     tags: ["Transactions Sync", "Customer Sync", "Inventory Sync"],
   },
 ];

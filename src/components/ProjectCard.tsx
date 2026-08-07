@@ -6,17 +6,13 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
         <div className="md:max-w-xl">
           <p className="text-[13px] font-semibold uppercase tracking-wider text-accent">
-            {project.role}
+            {project.category}
           </p>
           <h3 className="mt-2 font-heading text-[22px] font-semibold leading-tight text-surface-foreground md:text-[26px]">
-            {project.system}
+            {project.title}
           </h3>
-          <p className="mt-1 text-[14px] font-medium text-surface-foreground-muted">
-            {project.industry}
-            {project.region ? ` · ${project.region}` : ""}
-          </p>
           <p className="mt-4 text-[15.5px] leading-relaxed text-surface-foreground-muted">
-            {project.summary}
+            {project.description}
           </p>
         </div>
 
