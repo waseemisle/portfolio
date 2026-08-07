@@ -182,11 +182,19 @@ export const projects: Project[] = [
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
   },
   {
-    slug: "shopify-joor",
-    category: "Shopify + Joor",
-    title: "NetSuite Shopify & Joor",
+    slug: "shopify-wholesale-retail",
+    category: "Shopify",
+    title: "NetSuite Shopify Integration — Wholesale & Retail",
     description:
-      "Led fashion industry integration connecting NetSuite with Shopify B2C and Joor B2B platforms for unified wholesale and retail operations.",
+      "Led fashion industry integration connecting NetSuite with Shopify for B2C retail operations, syncing products, orders, inventory, and customers.",
+    tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
+  },
+  {
+    slug: "joor-wholesale-retail",
+    category: "Joor",
+    title: "NetSuite Joor Integration — Wholesale & Retail",
+    description:
+      "Led fashion industry integration connecting NetSuite with Joor for B2B wholesale operations, syncing products, orders, inventory, and customers.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
   },
   {
