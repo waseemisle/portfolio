@@ -2,10 +2,10 @@ import { basePath } from "./base-path";
 
 export const site = {
   name: "Waseem Akhtar",
-  role: "Senior NetSuite Technical Consultant",
+  role: "Senior NetSuite Technical & Functional Consultant",
   heroLines: ["I lead the", "integrations that power", "enterprise growth."],
   tagline:
-    "7+ years as a Lead NetSuite Technical Consultant, delivering 20+ enterprise integrations for 200+ clients across eCommerce, CRM, POS, and logistics — eliminating data silos, reducing manual effort by 90%, and unlocking measurable business value.",
+    "7+ years as a Lead NetSuite Technical & Functional Consultant, delivering 20+ enterprise integrations and implementations for 200+ clients across eCommerce, CRM, POS, and logistics — eliminating data silos, reducing manual effort by 90%, and unlocking measurable business value, while partnering with business stakeholders on requirements gathering, process design, and functional configuration across the full NetSuite implementation lifecycle.",
   email: "waseemisle@gmail.com",
   phone: "+92 321 2134142",
   phoneHref: "+923212134142",
@@ -45,7 +45,7 @@ export const nav = [
 export const pillars = [
   {
     title: "Create Clarity",
-    body: "I map complex business processes across your organization into clean, actionable ERP solutions that every team can understand and rely on.",
+    body: "I map complex business processes across your organization into clean, actionable ERP solutions that every team can understand and rely on — starting with discovery workshops, requirements gathering, and fit-gap analysis.",
   },
   {
     title: "Drive Efficiency",
@@ -58,9 +58,17 @@ export const pillars = [
 ];
 
 export const expertiseIntro =
-  "I turn fragmented systems into unified, automated operations across every industry I touch.";
+  "I turn fragmented systems and unclear processes into unified, automated, well-governed operations across every industry I touch.";
 
 export const expertise = [
+  {
+    title: "NetSuite Functional Consulting",
+    body: "Lead discovery workshops and requirements-gathering sessions with finance, operations, and warehouse stakeholders. Document business requirements (BRD/FRD), run fit-gap analysis, and configure roles, permissions, approval workflows, custom forms, saved searches, and SuiteAnalytics dashboards to match business policy.",
+  },
+  {
+    title: "ERP Implementation & Business Process Design",
+    body: "Design and configure Order-to-Cash, Procure-to-Pay, Inventory & Warehouse Management, and Financial Reporting processes end-to-end — from current/future-state process mapping through UAT coordination, end-user training, change management, and post-go-live hypercare.",
+  },
   {
     title: "eCommerce & Retail",
     body: "Led end-to-end integrations between NetSuite and Shopify, WooCommerce, Magento, and BigCommerce for fashion, lifestyle, and consumer brands — syncing products, orders, inventory, customers, and pricing in real time.",
@@ -90,11 +98,12 @@ export const expertise = [
 export const featuredIntegration = {
   eyebrow: "Featured Integration",
   title:
-    "I recently led a multi-platform eCommerce integration, connecting NetSuite with Shopify & Magento.",
-  role: "Lead Integration Architect",
+    "I recently led a multi-platform eCommerce implementation and integration, connecting NetSuite with Shopify & Magento.",
+  role: "Lead Functional & Technical Integration Architect",
   description:
-    "Architected a scalable integration framework handling real-time product sync, order management, inventory updates, and customer data flow across multiple storefronts — reducing manual data entry by 90%.",
+    "Ran discovery workshops to gather requirements from merchandising, finance, and fulfillment teams, then architected a scalable integration framework handling real-time product sync, order management, inventory updates, and customer data flow across multiple storefronts — reducing manual data entry by 90%.",
   tags: [
+    "Requirements Gathering",
     "SuiteScript 2.x",
     "REST APIs",
     "Celigo",
@@ -265,8 +274,9 @@ export const projects: Project[] = [
 
 export const about = {
   bio: [
-    "Senior NetSuite Technical Consultant with 7+ years of experience delivering enterprise ERP implementations, SuiteScript development, NetSuite administration, and large-scale system integrations across manufacturing, retail, wholesale distribution, logistics, healthcare, and eCommerce industries.",
-    "I've successfully delivered 20+ enterprise NetSuite integration projects connecting ERP with leading eCommerce, CRM, marketplace, accounting, POS, and 3PL platforms. I specialize in building scalable automation solutions that reduce manual effort, improve operational efficiency, and deliver measurable business value.",
+    "Senior NetSuite Technical & Functional Consultant with 7+ years of experience delivering enterprise ERP implementations, SuiteScript development, NetSuite administration, and large-scale system integrations across manufacturing, retail, wholesale distribution, logistics, healthcare, and eCommerce industries.",
+    "I've successfully delivered 20+ enterprise NetSuite integration and implementation projects connecting ERP with leading eCommerce, CRM, marketplace, accounting, POS, and 3PL platforms. I specialize in building scalable automation solutions that reduce manual effort, improve operational efficiency, and deliver measurable business value.",
+    "Beyond development, I lead functional discovery — gathering requirements, mapping business processes, running fit-gap analysis, and configuring roles, workflows, forms, and reporting so the system reflects how the business actually operates, from Order-to-Cash through Procure-to-Pay.",
   ],
   availability:
     "Based in Karachi, Pakistan. Available for remote consulting, contract work, and full-time opportunities worldwide.",
@@ -297,6 +307,7 @@ export const experience: ExperienceItem[] = [
     period: "Nov 2025 — Present",
     location: "Remote",
     bullets: [
+      "Act as functional point of contact for finance and operations stakeholders, gathering business requirements and translating business policy into NetSuite roles, permissions, and approval workflows.",
       "Configure and customize NetSuite using SuiteBuilder, SuiteFlow, Saved Searches, Custom Records, Custom Forms, Roles & Permissions, and SuiteAnalytics.",
       "Design and maintain enterprise integrations between NetSuite and BigCommerce via FarApp, automating customer, product, inventory, pricing, and fulfillment sync.",
       "Develop accounting integrations between NetSuite and QuickBooks for invoice sync, payment reconciliation, and financial reporting.",
@@ -315,7 +326,7 @@ export const experience: ExperienceItem[] = [
       "Designed REST API integrations between NetSuite and external ERP, CRM, POS, warehouse, logistics, and accounting systems.",
       "Developed reusable integration frameworks that reduced implementation effort across customer environments.",
       "Delivered production integrations using Celigo, Dell Boomi, REST APIs, XML, JSON, GraphQL, and Webhooks.",
-      "Led client workshops, technical design documentation, solution demos, and production deployments.",
+      "Led client workshops, requirements gathering, fit-gap analysis, technical design documentation, solution demos, and production deployments.",
     ],
   },
   {
@@ -343,6 +354,7 @@ export const experience: ExperienceItem[] = [
     period: "Dec 2021 — Mar 2023",
     location: "California, United States",
     bullets: [
+      "Provided functional consulting, gathering requirements from finance and operations stakeholders and configuring workflows, custom forms, and saved searches for Oracle NetSuite ERP.",
       "Developed and maintained NetSuite integrations across ERP, CRM, and supply chain management.",
       "Delivered Shopify Plus and app integrations ensuring seamless data flow and optimized user experience.",
       "Used Dell Boomi to integrate multiple systems, enhancing automation and process optimization.",
@@ -385,6 +397,23 @@ export const education = [
 ];
 
 export const skillGroups = [
+  {
+    title: "NetSuite Functional & Business Process",
+    skills: [
+      "Requirements Gathering",
+      "Fit-Gap Analysis",
+      "BRD/FRD Documentation",
+      "Order-to-Cash (O2C)",
+      "Procure-to-Pay (P2P)",
+      "Roles & Permissions Design",
+      "Approval Workflow Design",
+      "Custom Forms & Records",
+      "Saved Searches & Dashboards",
+      "UAT Coordination",
+      "End-User Training",
+      "Change Management",
+    ],
+  },
   {
     title: "NetSuite Development",
     skills: [
