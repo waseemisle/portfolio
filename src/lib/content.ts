@@ -3,9 +3,9 @@ import { basePath } from "./base-path";
 export const site = {
   name: "Waseem Akhtar",
   role: "Senior NetSuite Technical & Functional Consultant",
-  heroLines: ["I lead the", "integrations that power", "enterprise growth."],
+  heroLines: ["I architect the", "integrations that power", "enterprise growth."],
   tagline:
-    "7+ years as a Lead NetSuite Technical & Functional Consultant, delivering 20+ enterprise integrations and implementations for 200+ clients across eCommerce, CRM, POS, and logistics — eliminating data silos, reducing manual effort by 90%, and unlocking measurable business value, while partnering with business stakeholders on requirements gathering, process design, and functional configuration across the full NetSuite implementation lifecycle.",
+    "7+ years as a Senior NetSuite Technical & Functional Consultant, delivering 20+ enterprise integrations and implementations for 200+ clients across eCommerce, CRM, POS, and logistics — eliminating data silos, reducing manual effort by 90%, and unlocking measurable business value, while partnering with business stakeholders on requirements gathering, process design, and functional configuration across the full NetSuite implementation lifecycle.",
   email: "waseemisle@gmail.com",
   phone: "+92 321 2134142",
   phoneHref: "+923212134142",
@@ -63,7 +63,7 @@ export const expertiseIntro =
 export const expertise = [
   {
     title: "NetSuite Functional Consulting",
-    body: "Lead discovery workshops and requirements-gathering sessions with finance, operations, and warehouse stakeholders. Document business requirements (BRD/FRD), run fit-gap analysis, and configure roles, permissions, approval workflows, custom forms, saved searches, and SuiteAnalytics dashboards to match business policy.",
+    body: "Facilitate discovery workshops and requirements-gathering sessions with finance, operations, and warehouse stakeholders. Document business requirements (BRD/FRD), run fit-gap analysis, and configure roles, permissions, approval workflows, custom forms, saved searches, and SuiteAnalytics dashboards to match business policy.",
   },
   {
     title: "ERP Implementation & Business Process Design",
@@ -71,7 +71,7 @@ export const expertise = [
   },
   {
     title: "eCommerce & Retail",
-    body: "Led end-to-end integrations between NetSuite and Shopify, WooCommerce, Magento, and BigCommerce for fashion, lifestyle, and consumer brands — syncing products, orders, inventory, customers, and pricing in real time.",
+    body: "Delivered end-to-end integrations between NetSuite and Shopify, WooCommerce, Magento, and BigCommerce for fashion, lifestyle, and consumer brands — syncing products, orders, inventory, customers, and pricing in real time.",
   },
   {
     title: "Manufacturing & Distribution",
@@ -87,7 +87,7 @@ export const expertise = [
   },
   {
     title: "CRM & Sales",
-    body: "Led bi-directional sync between NetSuite and Salesforce, HubSpot for enterprise software and education technology companies — managing opportunities, estimates, contacts, and deals.",
+    body: "Built bi-directional sync between NetSuite and Salesforce, HubSpot for enterprise software and education technology companies — managing opportunities, estimates, contacts, and deals.",
   },
   {
     title: "Marketplaces & POS",
@@ -98,8 +98,8 @@ export const expertise = [
 export const featuredIntegration = {
   eyebrow: "Featured Integration",
   title:
-    "I recently led a multi-platform eCommerce implementation and integration, connecting NetSuite with Shopify & Magento.",
-  role: "Lead Functional & Technical Integration Architect",
+    "I recently delivered a multi-platform eCommerce implementation and integration, connecting NetSuite with Shopify & Magento.",
+  role: "Functional & Technical Integration Architect",
   description:
     "Ran discovery workshops to gather requirements from merchandising, finance, and fulfillment teams, then architected a scalable integration framework handling real-time product sync, order management, inventory updates, and customer data flow across multiple storefronts — reducing manual data entry by 90%.",
   tags: [
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     category: "Shopify",
     title: "NetSuite Shopify Integration",
     description:
-      "Led full-cycle integration enabling automated synchronization of sales orders, products, customers, and inventory between NetSuite and Shopify storefronts for a fashion retail brand.",
+      "Delivered full-cycle integration enabling automated synchronization of sales orders, products, customers, and inventory between NetSuite and Shopify storefronts for a fashion retail brand.",
     tags: ["Sales Orders Sync", "Products Sync", "Customers Sync", "Inventory Sync"],
   },
   {
@@ -139,7 +139,7 @@ export const projects: Project[] = [
     category: "VOS Logistics · AWS",
     title: "NetSuite 3PL VOS Logistics",
     description:
-      "Led development of a custom AWS middleware Connector App for European 3PL logistics, handling inventory sync, sales orders, purchase orders, item receipts, and price synchronization across 5 countries.",
+      "Architected a custom AWS middleware Connector App for European 3PL logistics, handling inventory sync, sales orders, purchase orders, item receipts, and price synchronization across 5 countries.",
     tags: ["Inventory Sync", "Sales Orders", "Purchase Orders", "Item Receipts", "Price Sync"],
   },
   {
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     category: "BigCommerce",
     title: "NetSuite BigCommerce Integration",
     description:
-      "Led comprehensive integration covering product catalog, orders, inventory levels, customer profiles, and dynamic price levels synchronization for an industrial supplies distributor.",
+      "Built a comprehensive integration covering product catalog, orders, inventory levels, customer profiles, and dynamic price levels synchronization for an industrial supplies distributor.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync", "Price Levels"],
   },
   {
@@ -155,7 +155,7 @@ export const projects: Project[] = [
     category: "Magento2",
     title: "NetSuite Magento2 Integration",
     description:
-      "Led automotive industry integration connecting NetSuite with Magento2 for unified product, order, inventory, and customer management.",
+      "Delivered an automotive industry integration connecting NetSuite with Magento2 for unified product, order, inventory, and customer management.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync", "Price Levels"],
   },
   {
@@ -163,7 +163,7 @@ export const projects: Project[] = [
     category: "Amazon",
     title: "NetSuite Amazon Integration",
     description:
-      "Led automotive industry integration connecting NetSuite with Amazon marketplace for unified product, order, inventory, and customer management.",
+      "Implemented an automotive industry integration connecting NetSuite with Amazon marketplace for unified product, order, inventory, and customer management.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
   },
   {
@@ -171,7 +171,7 @@ export const projects: Project[] = [
     category: "WooCommerce",
     title: "NetSuite WooCommerce Integration",
     description:
-      "Led end-to-end WooCommerce integration with automated product, order, inventory, customer, and payment synchronization to NetSuite for a luxury lifestyle brand.",
+      "Developed an end-to-end WooCommerce integration with automated product, order, inventory, customer, and payment synchronization to NetSuite for a luxury lifestyle brand.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync", "Payments Sync"],
   },
   {
@@ -179,7 +179,7 @@ export const projects: Project[] = [
     category: "Magento",
     title: "NetSuite Magento Integration",
     description:
-      "Led integration managing product catalog, orders, inventory, and customer data on Magento for a consumer electronics retailer.",
+      "Built an integration managing product catalog, orders, inventory, and customer data on Magento for a consumer electronics retailer.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
   },
   {
@@ -187,7 +187,7 @@ export const projects: Project[] = [
     category: "Shopify",
     title: "NetSuite Shopify Integration — Consumer Electronics",
     description:
-      "Led integration managing product catalog, orders, inventory, and customer data on Shopify for a consumer electronics retailer.",
+      "Delivered an integration managing product catalog, orders, inventory, and customer data on Shopify for a consumer electronics retailer.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
   },
   {
@@ -195,7 +195,7 @@ export const projects: Project[] = [
     category: "Shopify",
     title: "NetSuite Shopify Integration — Wholesale & Retail",
     description:
-      "Led fashion industry integration connecting NetSuite with Shopify for B2C retail operations, syncing products, orders, inventory, and customers.",
+      "Architected a fashion industry integration connecting NetSuite with Shopify for B2C retail operations, syncing products, orders, inventory, and customers.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
   },
   {
@@ -203,7 +203,7 @@ export const projects: Project[] = [
     category: "Joor",
     title: "NetSuite Joor Integration — Wholesale & Retail",
     description:
-      "Led fashion industry integration connecting NetSuite with Joor for B2B wholesale operations, syncing products, orders, inventory, and customers.",
+      "Delivered a fashion industry integration connecting NetSuite with Joor for B2B wholesale operations, syncing products, orders, inventory, and customers.",
     tags: ["Product Sync", "Orders Sync", "Inventory Sync", "Customer Sync"],
   },
   {
@@ -211,7 +211,7 @@ export const projects: Project[] = [
     category: "Square",
     title: "NetSuite Square Integration",
     description:
-      "Led retail POS integration syncing transactions, items, and customers with automated journal entry creation in NetSuite for accurate financial reporting.",
+      "Built a retail POS integration syncing transactions, items, and customers with automated journal entry creation in NetSuite for accurate financial reporting.",
     tags: ["Transactions Sync", "Items Sync", "JE Creation", "Customer Sync"],
   },
   {
@@ -219,7 +219,7 @@ export const projects: Project[] = [
     category: "Joor",
     title: "Joor NetSuite Integration",
     description:
-      "Led B2B wholesale platform integration handling sales orders, products, UPC codes, and customer data synchronization with NetSuite for a fashion brand.",
+      "Developed a B2B wholesale platform integration handling sales orders, products, UPC codes, and customer data synchronization with NetSuite for a fashion brand.",
     tags: ["Sales Orders", "Products Sync", "UPC Sync", "Customers Sync"],
   },
   {
@@ -227,7 +227,7 @@ export const projects: Project[] = [
     category: "SOS Inventory",
     title: "NetSuite SOS Inventory Integration",
     description:
-      "Led integration connecting NetSuite with SOS Inventory for stock management, syncing sales orders, products, UPCs, and customer records.",
+      "Configured an integration connecting NetSuite with SOS Inventory for stock management, syncing sales orders, products, UPCs, and customer records.",
     tags: ["Sales Orders", "Products Sync", "UPC Sync", "Customers Sync"],
   },
   {
@@ -235,7 +235,7 @@ export const projects: Project[] = [
     category: "Stripe",
     title: "NetSuite Stripe Integration",
     description:
-      "Led integration connecting NetSuite with Stripe for automated payment processing and reconciliation.",
+      "Implemented an integration connecting NetSuite with Stripe for automated payment processing and reconciliation.",
     tags: ["Payment Sync", "Customers Sync"],
   },
   {
@@ -243,7 +243,7 @@ export const projects: Project[] = [
     category: "QuickBooks",
     title: "NetSuite QuickBooks Integration",
     description:
-      "Led accounting system bridge enabling payment synchronization and consolidated financial reporting between NetSuite and QuickBooks.",
+      "Built an accounting system bridge enabling payment synchronization and consolidated financial reporting between NetSuite and QuickBooks.",
     tags: ["Payment Sync", "Financial Reporting", "Invoice Sync"],
   },
   {
@@ -251,7 +251,7 @@ export const projects: Project[] = [
     category: "Salesforce",
     title: "NetSuite Salesforce Integration",
     description:
-      "Led enterprise CRM-ERP integration for the software industry, syncing opportunities, estimates, and customer data between Salesforce and NetSuite.",
+      "Delivered an enterprise CRM-ERP integration for the software industry, syncing opportunities, estimates, and customer data between Salesforce and NetSuite.",
     tags: ["Opportunity Sync", "Estimates Sync", "Customers Sync"],
   },
   {
@@ -259,7 +259,7 @@ export const projects: Project[] = [
     category: "HubSpot",
     title: "NetSuite HubSpot Integration",
     description:
-      "Led EdTech industry integration connecting HubSpot marketing and sales data with NetSuite for unified contact, company, and deal management.",
+      "Developed an EdTech industry integration connecting HubSpot marketing and sales data with NetSuite for unified contact, company, and deal management.",
     tags: ["Contacts Sync", "Companies Sync", "Deals Sync"],
   },
   {
@@ -267,7 +267,7 @@ export const projects: Project[] = [
     category: "Square",
     title: "NetSuite Square — Seafood Processing",
     description:
-      "Led specialized integration for the seafood processing industry, handling transactions, customer data, and inventory synchronization with NetSuite.",
+      "Delivered a specialized integration for the seafood processing industry, handling transactions, customer data, and inventory synchronization with NetSuite.",
     tags: ["Transactions Sync", "Customer Sync", "Inventory Sync"],
   },
 ];
@@ -275,8 +275,8 @@ export const projects: Project[] = [
 export const about = {
   bio: [
     "Senior NetSuite Technical & Functional Consultant with 7+ years of experience delivering enterprise ERP implementations, SuiteScript development, NetSuite administration, and large-scale system integrations across manufacturing, retail, wholesale distribution, logistics, healthcare, and eCommerce industries.",
-    "I've successfully delivered 20+ enterprise NetSuite integration and implementation projects connecting ERP with leading eCommerce, CRM, marketplace, accounting, POS, and 3PL platforms. I specialize in building scalable automation solutions that reduce manual effort, improve operational efficiency, and deliver measurable business value.",
-    "Beyond development, I lead functional discovery — gathering requirements, mapping business processes, running fit-gap analysis, and configuring roles, workflows, forms, and reporting so the system reflects how the business actually operates, from Order-to-Cash through Procure-to-Pay.",
+    "I've successfully delivered 20+ enterprise NetSuite integration and implementation projects connecting ERP with top eCommerce, CRM, marketplace, accounting, POS, and 3PL platforms. I specialize in building scalable automation solutions that reduce manual effort, improve operational efficiency, and deliver measurable business value.",
+    "Beyond development, I own functional discovery — gathering requirements, mapping business processes, running fit-gap analysis, and configuring roles, workflows, forms, and reporting so the system reflects how the business actually operates, from Order-to-Cash through Procure-to-Pay.",
   ],
   availability:
     "Based in Karachi, Pakistan. Available for remote consulting, contract work, and full-time opportunities worldwide.",
@@ -326,7 +326,7 @@ export const experience: ExperienceItem[] = [
       "Designed REST API integrations between NetSuite and external ERP, CRM, POS, warehouse, logistics, and accounting systems.",
       "Developed reusable integration frameworks that reduced implementation effort across customer environments.",
       "Delivered production integrations using Celigo, Dell Boomi, REST APIs, XML, JSON, GraphQL, and Webhooks.",
-      "Led client workshops, requirements gathering, fit-gap analysis, technical design documentation, solution demos, and production deployments.",
+      "Facilitated client workshops, requirements gathering, fit-gap analysis, technical design documentation, solution demos, and production deployments.",
     ],
   },
   {
