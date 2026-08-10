@@ -2,7 +2,7 @@ import { basePath } from "./base-path";
 
 export const site = {
   name: "Waseem Akhtar",
-  role: "NetSuite Administrator · Solution Architect · SuiteScript Developer · Solutions Consultant",
+  role: "NetSuite Administrator · NetSuite Technical Consultant · SuiteScript Developer · NetSuite Techno Functional Consultant",
   heroLines: ["I own NetSuite systems", "end to end —", "advisory through production."],
   tagline:
     "7+ years across the full NetSuite lifecycle: discovery workshops and BRD/FRD documentation, solution architecture and SuiteScript development, system administration and governance, and post-go-live hypercare. 20+ enterprise engagements spanning manufacturing, retail, distribution, logistics, healthcare, and eCommerce.",
