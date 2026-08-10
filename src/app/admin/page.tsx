@@ -6,8 +6,8 @@ import { seedDefaultsIfEmpty, resetToDefaults } from "@/lib/content-store";
 
 const sections = [
   { label: "Site & Hero", href: "/admin/site", desc: "Name, role, headline, contact info, avatar, resume." },
-  { label: "Home Sections", href: "/admin/home", desc: "Platforms, pillars, expertise, featured integration, final CTA." },
-  { label: "Work / Projects", href: "/admin/projects", desc: "Add, edit, delete, and reorder case studies." },
+  { label: "Home Sections", href: "/admin/home", desc: "Platforms, pillars, lifecycle, capabilities, flagship engagements, final CTA." },
+  { label: "Engagements / Projects", href: "/admin/projects", desc: "Add, edit, delete, and reorder case studies." },
   { label: "Experience", href: "/admin/experience", desc: "Job history and bullet points." },
   { label: "Education", href: "/admin/education", desc: "Schools and degrees." },
   { label: "Skills", href: "/admin/skills", desc: "Skill groups and tags." },

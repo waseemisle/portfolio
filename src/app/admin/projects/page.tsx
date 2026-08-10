@@ -12,7 +12,7 @@ import {
 import { TextField, TextAreaField, StringListField, SaveButton } from "@/components/admin/fields";
 
 function emptyProject(order: number): Omit<ProjectDoc, "id"> {
-  return { category: "", title: "", description: "", tags: [], order };
+  return { category: "", title: "", description: "", tags: [], group: "", order };
 }
 
 export default function AdminProjectsPage() {
@@ -118,6 +118,11 @@ export default function AdminProjectsPage() {
                   onChange={(v) => update(item.id, { title: v })}
                 />
               </div>
+              <TextField
+                label="Group (used to cluster the compact Engagements grid, e.g. Commerce & Retail)"
+                value={item.group}
+                onChange={(v) => update(item.id, { group: v })}
+              />
               <TextAreaField
                 label="Description"
                 value={item.description}

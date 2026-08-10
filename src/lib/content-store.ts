@@ -33,9 +33,21 @@ export type SiteSettings = {
 };
 
 export type Pillar = { title: string; body: string };
-export type ExpertiseCard = { title: string; body: string };
 
-export type FeaturedIntegration = {
+export type LifecycleStage = {
+  stage: string;
+  roleLabel: string;
+  description: string;
+};
+
+export type CapabilityGroup = {
+  title: string;
+  roleTag: string;
+  body: string;
+  bullets: string[];
+};
+
+export type FlagshipEngagement = {
   eyebrow: string;
   title: string;
   role: string;
@@ -51,9 +63,10 @@ export type FinalCta = { title: string; body: string };
 export type HomeContent = {
   platforms: string[];
   pillars: Pillar[];
-  expertiseIntro: string;
-  expertise: ExpertiseCard[];
-  featuredIntegration: FeaturedIntegration;
+  lifecycle: LifecycleStage[];
+  capabilitiesIntro: string;
+  capabilities: CapabilityGroup[];
+  flagshipEngagements: FlagshipEngagement[];
   finalCta: FinalCta;
 };
 
@@ -71,6 +84,7 @@ export type ProjectDoc = {
   title: string;
   description: string;
   tags: string[];
+  group: string;
   order: number;
 };
 
@@ -132,12 +146,10 @@ export const defaultSiteSettings: SiteSettings = {
 export const defaultHomeContent: HomeContent = {
   platforms: defaults.platforms,
   pillars: defaults.pillars,
-  expertiseIntro: defaults.expertiseIntro,
-  expertise: defaults.expertise,
-  featuredIntegration: {
-    ...defaults.featuredIntegration,
-    flow: ["Shopify", "Magento", "NetSuite"],
-  },
+  lifecycle: defaults.lifecycle,
+  capabilitiesIntro: defaults.capabilitiesIntro,
+  capabilities: defaults.capabilities,
+  flagshipEngagements: defaults.flagshipEngagements,
   finalCta: defaults.finalCta,
 };
 

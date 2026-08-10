@@ -8,10 +8,13 @@ import {
   saveHomeContent,
 } from "@/lib/content-store";
 import {
-  TextField,
   TextAreaField,
   StringListField,
   TitleBodyListField,
+  LifecycleListField,
+  CapabilityGroupsField,
+  FlagshipListField,
+  TextField,
   SaveButton,
 } from "@/components/admin/fields";
 
@@ -70,82 +73,42 @@ export default function AdminHomePage() {
         </section>
 
         <section>
-          <h2 className="text-[15px] font-semibold text-neutral-900">Expertise</h2>
-          <div className="mt-3 space-y-4">
-            <TextAreaField
-              label="Expertise section headline"
-              value={data.expertiseIntro}
-              onChange={(v) => set("expertiseIntro", v)}
-              rows={2}
-            />
-            <TitleBodyListField
-              label="Expertise cards"
-              values={data.expertise}
-              onChange={(v) => set("expertise", v)}
+          <h2 className="text-[15px] font-semibold text-neutral-900">
+            Lifecycle (Discover → Support stepper)
+          </h2>
+          <div className="mt-3">
+            <LifecycleListField
+              label="Lifecycle stages"
+              values={data.lifecycle}
+              onChange={(v) => set("lifecycle", v)}
             />
           </div>
         </section>
 
         <section>
-          <h2 className="text-[15px] font-semibold text-neutral-900">Featured Integration</h2>
+          <h2 className="text-[15px] font-semibold text-neutral-900">Capabilities</h2>
           <div className="mt-3 space-y-4">
-            <TextField
-              label="Eyebrow label"
-              value={data.featuredIntegration.eyebrow}
-              onChange={(v) =>
-                set("featuredIntegration", { ...data.featuredIntegration, eyebrow: v })
-              }
-            />
             <TextAreaField
-              label="Title"
-              value={data.featuredIntegration.title}
-              onChange={(v) =>
-                set("featuredIntegration", { ...data.featuredIntegration, title: v })
-              }
+              label="Capabilities section headline"
+              value={data.capabilitiesIntro}
+              onChange={(v) => set("capabilitiesIntro", v)}
               rows={2}
             />
-            <TextField
-              label="Role"
-              value={data.featuredIntegration.role}
-              onChange={(v) =>
-                set("featuredIntegration", { ...data.featuredIntegration, role: v })
-              }
+            <CapabilityGroupsField
+              label="Capability groups"
+              values={data.capabilities}
+              onChange={(v) => set("capabilities", v)}
             />
-            <TextAreaField
-              label="Description"
-              value={data.featuredIntegration.description}
-              onChange={(v) =>
-                set("featuredIntegration", { ...data.featuredIntegration, description: v })
-              }
-              rows={3}
-            />
-            <StringListField
-              label="Tags"
-              values={data.featuredIntegration.tags}
-              onChange={(v) => set("featuredIntegration", { ...data.featuredIntegration, tags: v })}
-            />
-            <TextField
-              label="Architecture card title"
-              value={data.featuredIntegration.architectureTitle}
-              onChange={(v) =>
-                set("featuredIntegration", { ...data.featuredIntegration, architectureTitle: v })
-              }
-            />
-            <TextAreaField
-              label="Architecture card description"
-              value={data.featuredIntegration.architectureDescription}
-              onChange={(v) =>
-                set("featuredIntegration", {
-                  ...data.featuredIntegration,
-                  architectureDescription: v,
-                })
-              }
-              rows={3}
-            />
-            <StringListField
-              label="Flow diagram labels (e.g. Shopify → Magento → NetSuite)"
-              values={data.featuredIntegration.flow}
-              onChange={(v) => set("featuredIntegration", { ...data.featuredIntegration, flow: v })}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-[15px] font-semibold text-neutral-900">Flagship Engagements</h2>
+          <div className="mt-3">
+            <FlagshipListField
+              label="Flagship engagements"
+              values={data.flagshipEngagements}
+              onChange={(v) => set("flagshipEngagements", v)}
             />
           </div>
         </section>

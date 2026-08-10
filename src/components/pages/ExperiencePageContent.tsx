@@ -16,7 +16,7 @@ import {
   fetchSkillGroups,
 } from "@/lib/content-store";
 
-export default function AboutPageContent() {
+export default function ExperiencePageContent() {
   const site = useLiveData(fetchSiteSettings, defaultSiteSettings);
   const about = useLiveData(fetchAboutContent, defaultAboutContent);
   const experience = useLiveData(fetchExperience, defaultExperience);
@@ -30,7 +30,7 @@ export default function AboutPageContent() {
         <div className="mx-auto max-w-2xl">
           <Reveal>
             <p className="text-[15px] font-semibold tracking-tight text-accent">
-              About Me
+              Experience
             </p>
           </Reveal>
           <Reveal delay={0.05}>
@@ -70,7 +70,7 @@ export default function AboutPageContent() {
             {about.stats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-2xl bg-page-tag-bg p-5 text-center"
+                className="rounded-xl bg-page-tag-bg p-5 text-center"
               >
                 <p className="font-heading text-[28px] font-semibold text-page-foreground md:text-[34px]">
                   {stat.value}
@@ -89,7 +89,7 @@ export default function AboutPageContent() {
         <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
           <Reveal>
             <h2 className="font-heading text-[24px] font-semibold tracking-tight text-surface-foreground">
-              Experience
+              Work History
             </h2>
           </Reveal>
 
@@ -135,21 +135,21 @@ export default function AboutPageContent() {
         <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
           <Reveal>
             <h2 className="font-heading text-[24px] font-semibold tracking-tight text-page-foreground">
-              How I Work
+              Skills & Tools
             </h2>
           </Reveal>
           <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2">
             {skillGroups.map((group, i) => (
               <Reveal key={group.id} delay={0.04 * i}>
                 <div>
-                  <h3 className="text-[13px] font-semibold uppercase tracking-wider text-page-foreground-muted">
+                  <h3 className="font-mono text-[12px] font-semibold uppercase tracking-wider text-page-foreground-muted">
                     {group.title}
                   </h3>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {group.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="rounded-full bg-page-tag-bg px-3.5 py-1.5 text-[13px] font-medium text-page-foreground"
+                        className="rounded-md bg-page-tag-bg px-3 py-1.5 font-mono text-[12px] font-medium text-page-foreground"
                       >
                         {skill}
                       </span>

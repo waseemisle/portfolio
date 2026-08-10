@@ -42,12 +42,12 @@ export default function ContactPageContent() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-4 font-heading text-[34px] font-semibold leading-tight tracking-tight text-page-foreground md:text-[50px]">
-              Let&rsquo;s connect and sync your systems.
+              Let&rsquo;s talk about your NetSuite.
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-lg text-[16px] leading-relaxed text-page-foreground-muted">
-              Whether it&rsquo;s a new NetSuite integration, a stuck
+              Whether it&rsquo;s a system that needs an owner, a stuck
               production issue, or an ERP architecture review — reach out
               directly, I typically reply within a day.
             </p>

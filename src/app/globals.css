@@ -25,6 +25,7 @@
 
   --font-heading: var(--font-manrope);
   --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 :root[data-theme="light"] {
@@ -59,6 +60,7 @@
 
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
 }
 
 * {
@@ -91,20 +93,22 @@ h1, h2, h3, h4, h5, h6 {
   scrollbar-width: none;
 }
 
-.radial-glow {
-  background: radial-gradient(
-    ellipse 60% 50% at 50% 20%,
-    rgba(0, 153, 255, 0.16),
-    transparent 70%
-  );
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(0, 153, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 153, 255, 0.09) 1px, transparent 1px),
+    radial-gradient(ellipse 65% 55% at 50% 15%, rgba(0, 153, 255, 0.14), transparent 70%);
+  background-size: 44px 44px, 44px 44px, 100% 100%;
+  background-position: center top;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
 }
 
-:root[data-theme="light"] .radial-glow {
-  background: radial-gradient(
-    ellipse 60% 50% at 50% 20%,
-    rgba(0, 153, 255, 0.1),
-    transparent 70%
-  );
+:root[data-theme="light"] .blueprint-grid {
+  background-image:
+    linear-gradient(rgba(0, 153, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 153, 255, 0.07) 1px, transparent 1px),
+    radial-gradient(ellipse 65% 55% at 50% 15%, rgba(0, 153, 255, 0.09), transparent 70%);
 }
 
 @keyframes marquee {

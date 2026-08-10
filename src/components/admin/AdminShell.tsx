@@ -10,7 +10,7 @@ const navItems = [
   { label: "Overview", href: "/admin" },
   { label: "Site & Hero", href: "/admin/site" },
   { label: "Home Sections", href: "/admin/home" },
-  { label: "Work / Projects", href: "/admin/projects" },
+  { label: "Engagements / Projects", href: "/admin/projects" },
   { label: "Experience", href: "/admin/experience" },
   { label: "Education", href: "/admin/education" },
   { label: "Skills", href: "/admin/skills" },
