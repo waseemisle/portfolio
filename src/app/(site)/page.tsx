@@ -40,19 +40,19 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-6xl grid-cols-1 gap-14 md:grid-cols-[1.15fr_1fr] md:px-4 md:gap-10 lg:gap-16">
           <div>
             <Reveal>
-              <div className="flex items-center gap-3">
-                <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full ring-1 ring-page-border">
+              <div className="flex items-center gap-4">
+                <div className="h-24 w-24 shrink-0 overflow-hidden rounded-full ring-1 ring-page-border md:h-28 md:w-28">
                   <Image
                     src={site.avatarUrl}
                     alt={site.name}
-                    width={112}
-                    height={112}
+                    width={224}
+                    height={224}
                     unoptimized
                     priority
                     className="h-full w-full object-cover grayscale"
                   />
                 </div>
-                <p className="font-heading text-[16px] font-semibold text-page-foreground">
+                <p className="font-heading text-[19px] font-semibold text-page-foreground md:text-[21px]">
                   {site.name}
                 </p>
               </div>
