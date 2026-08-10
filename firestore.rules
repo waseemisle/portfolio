@@ -43,5 +43,14 @@ service cloud.firestore {
       );
       allow read, update, delete: if isAdmin();
     }
+
+    // Contact messages — anyone can submit the contact form (create only,
+    // no edits), only the admin account can read submissions.
+    match /messages/{docId} {
+      allow create: if request.resource.data.keys().hasAll(
+        ["name", "email", "message", "createdAt"]
+      );
+      allow read, update, delete: if isAdmin();
+    }
   }
 }

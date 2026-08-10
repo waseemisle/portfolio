@@ -35,8 +35,9 @@ export default function Home() {
   return (
     <div>
       {/* Hero — dark band, blueprint grid */}
-      <section className="blueprint-grid relative overflow-hidden bg-page px-6 pb-16 pt-20 md:pb-24 md:pt-24">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-14 md:grid-cols-[1.15fr_1fr] md:px-4 md:gap-10 lg:gap-16">
+      <section className="relative overflow-hidden bg-page px-6 pb-16 pt-20 md:pb-24 md:pt-24">
+        <div className="blueprint-grid pointer-events-none absolute inset-0" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-6xl grid-cols-1 gap-14 md:grid-cols-[1.15fr_1fr] md:px-4 md:gap-10 lg:gap-16">
           <div>
             <Reveal>
               <div className="flex items-center gap-3">

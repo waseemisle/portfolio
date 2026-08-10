@@ -115,19 +115,6 @@ export type CapabilityGroup = {
 
 export const capabilities: CapabilityGroup[] = [
   {
-    title: "Advisory & Solution Design",
-    roleTag: "Solution Architect · Solutions Consultant",
-    body: "Lead discovery, evaluate fit-gap, and design the target-state system — the layer that sits between what the business asks for and what gets built.",
-    bullets: [
-      "Discovery Workshops",
-      "Current/Future-State Process Mapping",
-      "Fit-Gap Analysis",
-      "Solution Design Documentation",
-      "Platform Evaluation",
-      "Stakeholder Alignment",
-    ],
-  },
-  {
     title: "Functional Configuration & Business Process",
     roleTag: "Functional Consultant",
     body: "Configure NetSuite to match business policy — not system defaults. Own Order-to-Cash and Procure-to-Pay design end to end.",
@@ -181,6 +168,19 @@ export const capabilities: CapabilityGroup[] = [
       "Change Control",
     ],
   },
+  {
+    title: "Advisory & Solution Design",
+    roleTag: "Solution Architect · Solutions Consultant",
+    body: "Lead discovery, evaluate fit-gap, and design the target-state system — the layer that sits between what the business asks for and what gets built.",
+    bullets: [
+      "Discovery Workshops",
+      "Current/Future-State Process Mapping",
+      "Fit-Gap Analysis",
+      "Solution Design Documentation",
+      "Platform Evaluation",
+      "Stakeholder Alignment",
+    ],
+  },
 ];
 
 export type FlagshipEngagement = {
@@ -219,10 +219,10 @@ export const flagshipEngagements: FlagshipEngagement[] = [
   {
     eyebrow: "Flagship Engagement — Advisory Through Production",
     title:
-      "A multi-storefront eCommerce rollout — from discovery workshops to a live, real-time NetSuite integration.",
+      "A Shopify eCommerce rollout — from discovery workshops to a live, real-time NetSuite integration.",
     role: "Functional & Technical Lead",
     description:
-      "Ran discovery workshops with merchandising, finance, and fulfillment teams to document requirements and fit-gap analysis, then architected and built the integration framework connecting NetSuite to Shopify and Magento storefronts — real-time product, order, inventory, and customer sync, cutting manual data entry by 90%.",
+      "Ran discovery workshops with merchandising, finance, and fulfillment teams to document requirements and fit-gap analysis, then architected and built the integration framework connecting NetSuite to Shopify — real-time product, order, inventory, and customer sync, cutting manual data entry by 90%.",
     tags: [
       "Discovery Workshops",
       "BRD/FRD",
@@ -234,8 +234,8 @@ export const flagshipEngagements: FlagshipEngagement[] = [
     ],
     architectureTitle: "NetSuite Commerce Integration Architecture",
     architectureDescription:
-      "Multi-platform eCommerce connected to NetSuite ERP with real-time bidirectional data flow, automated workflows, and comprehensive error handling.",
-    flow: ["Shopify", "Magento", "NetSuite"],
+      "Shopify eCommerce connected to NetSuite ERP with real-time bidirectional data flow, automated workflows, and comprehensive error handling.",
+    flow: ["Shopify", "NetSuite"],
   },
   {
     eyebrow: "Flagship Engagement — Functional Consulting & Administration",

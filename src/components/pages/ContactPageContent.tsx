@@ -3,6 +3,7 @@
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import LinkedinIcon from "@/components/icons/LinkedinIcon";
+import ContactForm from "@/components/ContactForm";
 import { useLiveData } from "@/hooks/useLiveData";
 import { defaultSiteSettings, fetchSiteSettings } from "@/lib/content-store";
 
@@ -86,7 +87,13 @@ export default function ContactPageContent() {
           </div>
 
           <Reveal delay={0.2}>
-            <div className="mt-14 flex flex-col items-start gap-3 border-t border-surface-border pt-10 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-14 max-w-2xl">
+              <ContactForm />
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.25}>
+            <div className="mt-10 flex flex-col items-start gap-3 border-t border-surface-border pt-10 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-2 text-[14px] text-surface-foreground-muted">
                 <MapPin size={16} className="text-surface-foreground-muted" />
                 {site.location}

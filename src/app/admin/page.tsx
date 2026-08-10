@@ -12,6 +12,7 @@ const sections = [
   { label: "Education", href: "/admin/education", desc: "Schools and degrees." },
   { label: "Skills", href: "/admin/skills", desc: "Skill groups and tags." },
   { label: "About", href: "/admin/about", desc: "Bio paragraphs and stats." },
+  { label: "Messages", href: "/admin/messages", desc: "Contact form submissions." },
   { label: "Traffic", href: "/admin/traffic", desc: "Visitor log: IP, location, referrer, pages." },
 ];
 

@@ -113,6 +113,14 @@ export type SkillGroupDoc = {
   order: number;
 };
 
+export type MessageDoc = {
+  id: string;
+  name: string;
+  email: string;
+  message: string;
+  createdAt: number;
+};
+
 export type VisitDoc = {
   id: string;
   path: string;
@@ -195,6 +203,7 @@ const EXPERIENCE_COL = collection(db, "experience");
 const EDUCATION_COL = collection(db, "education");
 const SKILLS_COL = collection(db, "skillGroups");
 const VISITS_COL = collection(db, "visits");
+const MESSAGES_COL = collection(db, "messages");
 
 /* ---------------------------------------------------------------------- */
 /* Fetchers — one-time reads, fall back to defaults on any error          */
@@ -301,6 +310,20 @@ export async function fetchVisits(limitCount = 500): Promise<VisitDoc[]> {
   const q = query(VISITS_COL, orderBy("createdAt", "desc"));
   const snap = await getDocs(q);
   return snap.docs.slice(0, limitCount).map((d) => ({ id: d.id, ...d.data() }) as VisitDoc);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Contact messages (public create, admin-only read via Firestore rules)  */
+/* ---------------------------------------------------------------------- */
+
+export async function submitMessage(data: Omit<MessageDoc, "id" | "createdAt">) {
+  return addDoc(MESSAGES_COL, { ...data, createdAt: Date.now() });
+}
+
+export async function fetchMessages(limitCount = 500): Promise<MessageDoc[]> {
+  const q = query(MESSAGES_COL, orderBy("createdAt", "desc"));
+  const snap = await getDocs(q);
+  return snap.docs.slice(0, limitCount).map((d) => ({ id: d.id, ...d.data() }) as MessageDoc);
 }
 
 /* ---------------------------------------------------------------------- */
