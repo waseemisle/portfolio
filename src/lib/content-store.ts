@@ -354,3 +354,29 @@ export async function seedDefaultsIfEmpty() {
 
   return results;
 }
+
+/* ---------------------------------------------------------------------- */
+/* Reset — overwrites Firestore with content.ts defaults unconditionally  */
+/* ---------------------------------------------------------------------- */
+
+async function overwriteCollection<T extends { id: string }>(
+  col: typeof PROJECTS_COL,
+  items: T[]
+) {
+  const existing = await getDocs(col);
+  await Promise.all(existing.docs.map((d) => deleteDoc(d.ref)));
+  for (const item of items) {
+    const { id: _id, ...rest } = item;
+    await addDoc(col, rest);
+  }
+}
+
+export async function resetToDefaults() {
+  await saveSiteSettings(defaultSiteSettings);
+  await saveHomeContent(defaultHomeContent);
+  await saveAboutContent(defaultAboutContent);
+  await overwriteCollection(PROJECTS_COL, defaultProjects);
+  await overwriteCollection(EXPERIENCE_COL, defaultExperience);
+  await overwriteCollection(EDUCATION_COL, defaultEducation);
+  await overwriteCollection(SKILLS_COL, defaultSkillGroups);
+}
