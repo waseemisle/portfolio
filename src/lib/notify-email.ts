@@ -8,11 +8,12 @@ const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 export const emailNotificationsConfigured = Boolean(SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY);
 
 // Sends the "you got a new contact form submission" email via EmailJS.
-// Template variables available: from_name, from_email, message, to_email.
-// Make sure the EmailJS template's "To Email" field is either hardcoded to
-// your address or set to {{to_email}} — a template pointed at a variable
-// this code doesn't send is the #1 cause of EmailJS's 400 "recipients
-// address is empty" error.
+// The actual EmailJS template (dashboard.emailjs.com/admin/templates/j3ts9d9)
+// only has placeholders for {{name}}, {{time}}, and {{message}} — no email
+// field — so the sender's email is folded into the message body itself to
+// guarantee it's visible, rather than depending on a template slot that
+// doesn't exist. email/reply_to are still sent too in case the template's
+// (not-body-visible) Reply-To setting references one of them.
 // Best-effort: the form submission itself already succeeded (data is safely
 // in Firestore) by the time this runs, so a failure here is logged, not thrown.
 export async function notifyNewMessage(data: {
@@ -29,9 +30,11 @@ export async function notifyNewMessage(data: {
       SERVICE_ID,
       TEMPLATE_ID,
       {
-        from_name: data.name,
-        from_email: data.email,
-        message: data.message,
+        name: data.name,
+        time: new Date().toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" }),
+        message: `Reply to: ${data.email}\n\n${data.message}`,
+        email: data.email,
+        reply_to: data.email,
         to_email: site.email,
       },
       { publicKey: PUBLIC_KEY }
